@@ -4,7 +4,7 @@ public class HelloJNI {
 
     static {
         // ライブラリのロード
-        System.loadLibrary("hello");
+        System.loadLibrary("HelloJNIImpl");
     }
 
     public static void main(String[] args) {
