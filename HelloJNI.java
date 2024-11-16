@@ -1,11 +1,13 @@
 public class HelloJNI {
+    // Nativeメソッドの宣言
+    public native void printHello(String message);
+
     static {
-        System.loadLibrary("HelloJNIImpl");
+        // ライブラリのロード
+        System.loadLibrary("hello");
     }
 
-    public native void printHello();
-
     public static void main(String[] args) {
-        new HelloJNI().printHello();
+        new HelloJNI().printHello("Javaから渡されたメッセージ");
     }
 }
