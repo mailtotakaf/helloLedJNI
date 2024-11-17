@@ -66,3 +66,33 @@ java -jar HelloJNI.jar
 ```
 java -jar HelloJNI.jar
 ```
+
+<br><br>
+## java -jar HelloJNI.jarコマンドを実行するシェルスクリプト
+```bash
+#!/bin/bash
+
+# JAR ファイルのパスを指定
+JAR_FILE="HelloJNI.jar"
+
+# Java コマンドを実行
+java -jar "$JAR_FILE"
+
+# 実行が終了したことを表示
+echo "HelloJNI.jar の実行が完了しました。"
+```
+
+<br><br>
+---
+# helloLedJNI
+```bash
+sudo apt-get install wiringpi
+```
+```bash
+gcc -shared -o libLedJNIImpl.so -I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux LedJNIImpl.c -lwiringPi
+```
+実行
+```bash
+java -Djava.library.path=. LedJNI
+```
+

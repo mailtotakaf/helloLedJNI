@@ -15,5 +15,5 @@ JNIEXPORT void JNICALL Java_LedJNI_ledOn(JNIEnv *env, jobject obj) {
                 digitalWrite(LED, LOW);   //オフ
                 delay(500);
         }
-        return 0;
+        return;
 }
