@@ -39,10 +39,19 @@ jarファイルには、jniライブラリ(*.soなど)を含めることがで�
 
 ●java.library.pathで指定する場合
 ```bash
+java -Djava.library.path=/path/to/native/lib -jar /path/to/your/JniProject.jar
+```
+つまり、同じ階層にある場合は
+```bash
 java -Djava.library.path=. -jar HelloJNI.jar
 ```
-
+<br><br>
 ●LD_LIBRARY_PATHをで設定する場合
+```bash
+export LD_LIBRARY_PATH=/path/to/native/lib:$LD_LIBRARY_PATH
+java -jar /path/to/your/JniProject.jar
+```
+つまり、同じ階層にある場合は
 ```bash
 export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 java -jar HelloJNI.jar
