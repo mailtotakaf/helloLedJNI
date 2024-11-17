@@ -1,3 +1,4 @@
+package helloJNI;
 public class HelloJNI {
     // Nativeメソッドの宣言
     public native void printHello(String message);
